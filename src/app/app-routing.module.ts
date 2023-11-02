@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'bureau-detudes',
+    loadChildren: () => import('./pages/bureau-detudes/bureau-detudes.module').then( m => m.BureauDetudesPageModule)
+  },
+  {
+    path: 'check-user-status/:userId',
+    loadChildren: () => import('./pages/check-user-status/check-user-status.module').then( m => m.CheckUserStatusPageModule)
+  },
+  {
+    path: 'new-product',
+    loadChildren: () => import('./pages/new-product/new-product.module').then( m => m.NewProductPageModule)
+  },
 ];
 
 @NgModule({

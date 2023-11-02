@@ -1,20 +1,65 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="main_content_div">
+      
+      <div class="back_image" [style.backgroundImage]="'url(assets/imgs/neptune-bg.jpg)'">
+          <div class="overlay_div">
+              <div class="icn_flex">
+                  <ion-icon name="home"></ion-icon>
+              </div>
+              <div class="user_back" [style.backgroundImage]="'url(assets/imgs/neptune-logo.png)'"></div>
+              <ion-label class="name_lbl">Bienvenue!</ion-label>
+              <ion-label class="white_lbl">Choisissez votre département</ion-label>
+          </div>
+      </div>
+      
+      <div class="content_div">
+          
+          <div class="white_box" style="margin-top: -40px;">
+              <div class="item_div" routerLink="/check-user-status/1">
+                  <ion-icon name="business-sharp" class="first_icn"></ion-icon>
+                  <ion-label>Administration</ion-label>
+                  <ion-icon name="chevron-forward" class="last_icn"></ion-icon>
+              </div>
+              <div class="item_div" routerLink="/check-user-status/6" style="border: 0px;">
+                  <ion-icon name="ban" class="first_icn"></ion-icon>
+                  <ion-label>Bureau d'Etudes</ion-label>
+                  <ion-icon name="chevron-forward" class="last_icn"></ion-icon>
+              </div>
+          </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+          <div class="white_box">
+              <div class="item_div" routerLink="/check-user-status/2">
+                  <ion-icon name="cart" class="first_icn"></ion-icon>
+                  <ion-label>Ressources humaines</ion-label>
+                  <ion-icon name="chevron-forward" class="last_icn"></ion-icon>
+              </div>
+              <div class="item_div" routerLink="/check-user-status/5">
+                  <ion-icon name="briefcase" class="first_icn"></ion-icon>
+                  <ion-label>Commerciale</ion-label>
+                  <ion-icon name="chevron-forward" class="last_icn"></ion-icon>
+              </div>
+              <div class="item_div" routerLink="/check-user-status/3">
+                  <ion-icon name="bus" class="first_icn"></ion-icon>
+                  <ion-label>Logistique</ion-label>
+                  <ion-icon name="chevron-forward" class="last_icn"></ion-icon>
+              </div>
+              <div class="item_div" routerLink="/check-user-status/4">
+                  <ion-icon name="calculator" class="first_icn"></ion-icon>
+                  <ion-label>Facturation</ion-label>
+                  <ion-icon name="chevron-forward" class="last_icn"></ion-icon>
+              </div>
+              <div class="item_div" routerLink="/check-user-status/7">
+                  <ion-icon name="document-text-outline" class="first_icn"></ion-icon>
+                  <ion-label>Finance</ion-label>
+                  <ion-icon name="chevron-forward" class="last_icn"></ion-icon>
+              </div>
+          </div>
+      </div>
+
+      
+
+
   </div>
+
 </ion-content>

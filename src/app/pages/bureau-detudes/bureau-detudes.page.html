@@ -1,0 +1,45 @@
+<ion-content>
+  <div class="main_content_div">
+
+      <div class="header_div" (click)="location.back()">
+          <ion-icon name="chevron-back"></ion-icon>
+          <ion-label>Bureau d'Etudes</ion-label>
+      </div>
+
+      <div class="content_div">
+        <div class="ion-padding">
+          <ion-button size="block"  routerLink="/new-product">
+            Créer un nouveau projet
+          </ion-button> 
+          <ion-list>
+            <ion-list-header>
+              <ion-label>
+                <h5>Les Projets en cours</h5>
+              </ion-label>
+            </ion-list-header>
+            <div class="app_detail">
+              <div class="card_box" style="box-shadow: inherit; padding: 0 16px 0; margin: 0;">
+                <ion-select #select interface="action-sheet" placeholder="Trier" multiple="true" cancelText="Retour" okText="Séléctionner">
+                  <ion-select-option>Complet</ion-select-option>
+                  <ion-select-option *ngFor="let option of stage">{{option}}</ion-select-option>
+                </ion-select>
+              </div>
+              <div class="card_box"  *ngFor="let order of orders"  routerLink="/new-product">
+                <div class="flex_div" style="margin-top: 10px">
+                    <ion-label class="bold_lbl"></ion-label>
+                    <ion-label class="bold_lbl">{{order.id}}</ion-label>
+                </div>
+                  <ion-label class="bold_lbl">{{order.client_name}}</ion-label>
+                  <ion-label class="green_lbl" >{{order.stage}}</ion-label>
+                  <ion-label class="simple_lbl"><ion-text color="danger">En Cours</ion-text></ion-label>
+                  <ion-label class="simple_lbl"><ion-text color="success">Crée le 2 Novembre 2022</ion-text></ion-label>
+                  <ion-label class="simple_lbl"><ion-text color="tertiary">Date facturé: Jeudi 2 Novembre 2023</ion-text></ion-label>
+              </div>
+              <p *ngIf="!orders.length"><em>Aucune commande trouvé.</em></p>
+            </div>
+          </ion-list>
+        </div>
+      </div>
+  </div>
+
+</ion-content>

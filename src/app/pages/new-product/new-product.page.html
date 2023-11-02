@@ -1,0 +1,77 @@
+<ion-content>
+  <div class="main_content_div">
+
+      <div class="header_div" (click)="location.back()">
+          <ion-icon name="chevron-back"></ion-icon>
+          <ion-label>Nouveau Produit</ion-label>
+      </div>
+
+      <div class="content_div">
+
+
+
+        <div class="main_div">
+          <div class="grey_div">
+              <ion-icon name="barbell"></ion-icon>
+          </div>
+          <div class="detail_div">
+              <ion-label class="bold_lbl">Nom du Projet</ion-label>
+              <ion-input class="grey_lbl" placeholder="nom" type="text"></ion-input>
+          </div>
+        </div>
+        <div class="main_div">
+          <div class="grey_div">
+              <ion-icon name="location"></ion-icon>
+          </div>
+          <div class="detail_div">
+              <ion-label class="bold_lbl">Localisation</ion-label>
+              <ion-select #locs class="grey_lbl" interface="action-sheet" placeholder="Choisir" multiple="false" cancelText="Retour"
+                okText="Ajouter">
+                <ion-select-option>Douala</ion-select-option>
+                <ion-select-option>Yaounde</ion-select-option>
+                <ion-select-option>Bafoussam</ion-select-option>
+              </ion-select>
+          </div>
+        </div>
+        <div class="main_div">
+          <div class="grey_div">
+              <ion-icon name="person"></ion-icon>
+          </div>
+          <div class="detail_div">
+              <ion-label class="bold_lbl">Agents logistique</ion-label>
+              <ion-select class="grey_lbl" interface="action-sheet" placeholder="Choisir"  multiple="false" cancelText="Retour"
+                okText="Ajouter">
+                <ion-select-option >Fonge Brian</ion-select-option>
+                <ion-select-option >Cedric Che-Azeh</ion-select-option>
+                <ion-select-option >Arrey Johnson</ion-select-option>
+              </ion-select>
+          </div>
+        </div>
+
+
+        <div class="main_div">
+          <div class="grey_div">
+              <ion-icon name="barbell"></ion-icon>
+          </div>
+          <div class="detail_div">
+              <ion-label class="bold_lbl">Montant</ion-label>
+              <ion-input class="grey_lbl" placeholder="montant" type="text"></ion-input>
+          </div>
+        </div>
+
+
+        <div class="main_div">
+          <div class="grey_div">
+              <ion-icon name="barbell"></ion-icon>
+          </div>
+          <div class="detail_div">
+              <ion-label class="bold_lbl">Autre Detail</ion-label>
+              <ion-input class="grey_lbl" placeholder="autre detail" type="text"></ion-input>
+          </div>
+        </div>
+    </div>
+    <div class="ion-padding">
+      <ion-button color="danger" shape="round" expand="block">Enregistrer</ion-button>
+    </div>
+  </div>
+</ion-content>

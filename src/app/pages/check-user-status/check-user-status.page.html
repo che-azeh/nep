@@ -1,0 +1,62 @@
+<ion-content>
+  <div class="main_content">
+
+      <div class="header_flex">
+          <ion-button size="small" (click)="location.back()"  fill="clear">
+            <ion-icon name="chevron-back"></ion-icon>
+            Retour
+          </ion-button>
+      </div>
+
+      <ion-label class="bold_lbl">Bienvenue</ion-label>
+      <ion-label class="small_lbl">Veillez entrer votre code d'accès et votre mot de passe</ion-label>
+
+      <ion-input type="text"  placeholder="Code d'accès">
+      </ion-input>
+
+      <ion-input type="text"  placeholder="Mot de Passe">
+      </ion-input>
+
+      <ion-button color="primary" expand="block" [routerLink]="['/bureau-detudes']">
+        Connectez-vous
+      </ion-button>
+
+      <ion-label class="forgot_lbl">
+        <ion-icon name="finger-print-outline"></ion-icon>
+      </ion-label>
+
+      <ion-label class="abs_lbl">&copy; Neptune Oil Group <br />2023</ion-label>
+
+  </div>
+</ion-content>
+
+
+
+<!--
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Accueil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <img src="assets/imgs/logo-scrm-cm.png" />
+      </ion-col>
+      <ion-col size="12">
+        <h1>Bienvenue</h1>
+        <h1>Veillez entrer votre code d'accès et votre mot de passe</h1>
+        <ion-input placeholder="Code d'accès" [(ngModel)]="userId"></ion-input>
+        <ion-input type="password" placeholder="Mot de Passe" [(ngModel)]="pw"></ion-input>
+        <ion-button expand="full" (click)="authenticate()" color="success">Connectez-vous</ion-button>
+        <p>&copy; Société Camerounaise de Raffinage MAYA - 2020</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+-->
